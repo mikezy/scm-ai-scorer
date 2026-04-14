@@ -1,0 +1,13 @@
+{
+  "name": "scm-ai-scorer",
+  "version": "1.0.0",
+  "description": "Claude Code skill that scores AI skills on supply chain resumes against what employers actually reward",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "validate": "bash tests/validate.sh",
+    "validate:win": "powershell -NoLogo -NoProfile -ExecutionPolicy Bypass -File tests/validate.ps1",
+    "test": "bash tests/validate.sh",
+    "test:win": "powershell -NoLogo -NoProfile -ExecutionPolicy Bypass -File tests/validate.ps1"
+  }
+}
