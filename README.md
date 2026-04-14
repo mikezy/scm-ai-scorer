@@ -15,37 +15,72 @@ The gap isn't awareness. It's calibration.
 - **Where you stand** — a 0-100 score across 6 employer-valued dimensions
 - **What's working** — AI skills classified by market signal strength (Tier 1-4)
 - **What to fix** — 5 specific, paste-ready recommendations prioritized by impact
-- **How you match** — optional job description alignment analysis
+- **How you match** — optional job description alignment with automatic JD-Fit Mode for non-AI roles
 
-Built for supply chain and MSCM professionals. Based on research presented at the University of Michigan Ross School of Business.
+Built for supply chain and MSCM professionals.
+
+## Requirements
+
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI
 
 ## Quick Start
 
 ### Install
 
 ```bash
-# Claude Code
-claude install-plugin /path/to/scm-ai-scorer
+# From GitHub
+claude install-skill https://github.com/mikezy/scm-ai-scorer
 
-# Or add to your project's .claude/settings.json
-{
-  "plugins": ["/path/to/scm-ai-scorer"]
-}
+# Or clone and install locally
+git clone https://github.com/mikezy/scm-ai-scorer.git
+claude install-skill ./scm-ai-scorer
 ```
 
 ### Use
 
-```bash
-# Score a resume (paste text)
-/scm-ai-score [paste your resume here]
+**Score your resume** — paste your resume text or provide a file path:
+```
+/scm-ai-score
+> paste your resume text here
+```
 
-# Score a resume (file path)
-/scm-ai-score Please read my resume at ./resume.pdf and score it
+**Score a resume file:**
+```
+/scm-ai-score ./resume.pdf
+```
 
-# Score against a specific job description
-/scm-ai-score [paste resume]
----
-[paste job description]
+**Score against a job description** — add a `---` separator, then paste the JD:
+```
+/scm-ai-score
+> [resume text]
+> ---
+> [job description text]
+```
+
+If the JD is AI-heavy, you get an AI skills alignment analysis. If the JD has minimal AI requirements (e.g., a general PM or strategy role), the skill automatically switches to **JD-Fit Mode** — a general resume-vs-JD alignment focused on what the role actually demands.
+
+### Example Output
+
+```
+## AI Resume Score: 63/100 — AI Aware
+
+### Score Breakdown
+
+| Dimension              | Score | Weight | Weighted | Key Evidence                              |
+|------------------------|-------|--------|----------|-------------------------------------------|
+| D1: AI Sophistication  | 12/20 | 25%    | 3.0      | ML forecasting model — Tier 2-3 skills    |
+| D2: Domain Integration | 14/20 | 25%    | 3.5      | AI applied to demand planning, 500+ SKUs  |
+| D3: Agentic Thinking   | 10/20 | 15%    | 1.5      | Automated procurement workflow with GPT-4  |
+| D4: Business Impact    | 13/20 | 15%    | 2.0      | 18% forecast accuracy improvement          |
+| D5: Governance & Risk  |  2/20 | 10%    | 0.2      | No governance evidence                     |
+| D6: People & Process   | 11/20 | 10%    | 1.1      | Trained cross-functional team of 12        |
+
+### Top 5 Recommendations
+
+1. **Add AI governance to your demand planning role** — "Established data quality
+   standards and model monitoring for ML forecasting pipeline" — demand up 81% YoY
+   — Expected impact: +6 points
+...
 ```
 
 ## Scoring Rubric
@@ -98,6 +133,12 @@ For other AI coding assistants, the core rubric lives in [`skills/scm-ai-score/S
 ## Contributing
 
 The AI job market moves fast. If you have updated employer demand data, new research citations, or suggestions for the rubric, PRs are welcome. Please include your data source.
+
+## Credits
+
+Built by [Mike Zhuo](https://github.com/mikezy) — based on research presented at the University of Michigan Ross School of Business.
+
+Built with [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
 ## License
 
