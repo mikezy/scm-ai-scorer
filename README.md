@@ -68,12 +68,12 @@ If the JD is AI-heavy, you get an AI skills alignment analysis. If the JD has mi
 
 | Dimension              | Score | Weight | Weighted | Key Evidence                              |
 |------------------------|-------|--------|----------|-------------------------------------------|
-| D1: AI Sophistication  | 12/20 | 25%    | 3.0      | ML forecasting model — Tier 2-3 skills    |
-| D2: Domain Integration | 14/20 | 25%    | 3.5      | AI applied to demand planning, 500+ SKUs  |
-| D3: Agentic Thinking   | 10/20 | 15%    | 1.5      | Automated procurement workflow with GPT-4  |
-| D4: Business Impact    | 13/20 | 15%    | 2.0      | 18% forecast accuracy improvement          |
-| D5: Governance & Risk  |  2/20 | 10%    | 0.2      | No governance evidence                     |
-| D6: People & Process   | 11/20 | 10%    | 1.1      | Trained cross-functional team of 12        |
+| D1: AI Sophistication  | 14/20 | 25%    | 3.50     | ML forecasting model — Tier 2-3 skills    |
+| D2: Domain Integration | 15/20 | 25%    | 3.75     | AI applied to demand planning, 500+ SKUs  |
+| D3: Agentic Thinking   | 12/20 | 15%    | 1.80     | Automated procurement workflow with GPT-4  |
+| D4: Business Impact    | 13/20 | 15%    | 1.95     | 18% forecast accuracy improvement          |
+| D5: Governance & Risk  |  4/20 | 10%    | 0.40     | No governance evidence                     |
+| D6: People & Process   | 12/20 | 10%    | 1.20     | Trained cross-functional team of 12        |
 
 ### Top 5 Recommendations
 
