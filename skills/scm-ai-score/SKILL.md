@@ -125,6 +125,8 @@ For each of D1-D6, assign a score (0-20) with a 1-2 sentence justification citin
 ### Step 4: Calculate Overall Score
 Apply weights: `(D1 * 0.25 + D2 * 0.25 + D3 * 0.15 + D4 * 0.15 + D5 * 0.10 + D6 * 0.10) * 5`
 
+Example: `(16*0.25 + 14*0.25 + 12*0.15 + 14*0.15 + 10*0.10 + 12*0.10) = 13.6 → 13.6 * 5 = 68`
+
 This normalizes the weighted sum to a 0-100 scale.
 
 ### Step 5: JD Alignment (if JD provided)
