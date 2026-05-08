@@ -279,3 +279,14 @@ If a JD has some AI requirements but AI is not the central focus, you may run BO
 2. JD-Fit Mode (this section) for the full JD alignment
 
 Clearly label each section so the user knows which lens is being applied.
+
+## Sources
+
+> **Note:** Citation URLs below are representative of the cited research but
+> should be verified by the author against the specific reports consulted.
+> Update with exact URLs and access dates as needed.
+
+- [BCG — Where AI Delivers the Biggest Boosts (2024)](https://www.bcg.com/publications/2024/where-ai-is-expected-to-have-the-biggest-boosts)
+- [Gartner — Supply Chain AI](https://www.gartner.com/en/supply-chain/topics/supply-chain-ai)
+- [McKinsey — Succeeding in the AI Supply Chain Revolution](https://www.mckinsey.com/capabilities/operations/our-insights/succeeding-in-the-ai-supply-chain-revolution)
+- [MIT Sloan Management Review — Artificial Intelligence](https://sloanreview.mit.edu/topic/artificial-intelligence/)
