@@ -1,6 +1,6 @@
 {
   "name": "scm-ai-scorer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Claude Code skill that scores AI skills on supply chain resumes against what employers actually reward",
   "license": "MIT",
   "scripts": {

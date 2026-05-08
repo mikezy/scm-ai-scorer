@@ -1,4 +1,5 @@
 {
   "name": "scm-ai-scorer",
+  "version": "1.0.1",
   "description": "Score and improve AI skills on a supply chain resume. Data-driven rubric based on what employers actually pay premium for."
 }
