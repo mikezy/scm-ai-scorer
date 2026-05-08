@@ -55,6 +55,20 @@ function Check-Frontmatter($filePath) {
 Check-Frontmatter (Join-Path $RepoRoot 'skills/scm-ai-score/SKILL.md')
 Check-Frontmatter (Join-Path $RepoRoot 'commands/scm-ai-score.md')
 
+# --- Eval harness validation ---
+Write-Host "Validating eval harness..."
+$evalFile = Join-Path $RepoRoot 'tests/eval-anchors.md'
+if (-not (Test-Path $evalFile)) {
+    Fail "Missing eval harness: tests/eval-anchors.md"
+} else {
+    $evalContent = Get-Content $evalFile -Raw
+    foreach ($anchor in @('ANCHOR_A', 'ANCHOR_B', 'ANCHOR_C')) {
+        if ($evalContent -notmatch $anchor) {
+            Fail "Eval harness missing anchor: $anchor"
+        }
+    }
+}
+
 # --- Result ---
 if ($Errors -gt 0) {
     Write-Host "Validation FAILED with $Errors error(s)."

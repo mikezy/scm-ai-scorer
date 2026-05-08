@@ -83,6 +83,17 @@ check_md_links() {
 
 [ -f "$REPO_ROOT/README.md" ] && check_md_links "$REPO_ROOT/README.md"
 
+# --- Eval harness validation ---
+echo "Validating eval harness..."
+EVAL_FILE="$REPO_ROOT/tests/eval-anchors.md"
+if [ ! -f "$EVAL_FILE" ]; then
+  fail "Missing eval harness: tests/eval-anchors.md"
+else
+  for anchor in ANCHOR_A ANCHOR_B ANCHOR_C; do
+    grep -q "$anchor" "$EVAL_FILE" || fail "Eval harness missing anchor: $anchor"
+  done
+fi
+
 # --- Result ---
 if [ "$ERRORS" -gt 0 ]; then
   echo "Validation FAILED with $ERRORS error(s)."
